@@ -52,19 +52,38 @@ namespace projet_UI
             {
                 villename = dialog.ResponseText;
             }
-            
 
             Thickness t = new Thickness(x,y, 0, 0);
              el.Margin = t;
 
             // creation de la ville
             Ville town = new Ville(Convert.ToInt32(x), Convert.ToInt32(y), villename);
-       
+            Data.getData().Insert(town);
+
+            //TODO : 
+            Chemin c = new Chemin();
+
+            List<Ville> Vlles = new List<Ville>(Villes);
+            Generation g = new Generation(10, Vlles);
+            List<Chemin> maGeneration = g.getPremierGen();
+
+
+            /*
+            foreach(Chemin c in maGeneration)
+            {
+                Console.WriteLine(c.ToString());
+                Console.WriteLine(c.Score);
+            } 
             Villes.Add(town);
-
-
             canva.Children.Add(el);
             
+            */
+
+            c.GetFirstGeneration(10, Vlles);
+            Console.WriteLine(c.GetFirstGeneration(10, Vlles));
+
+
+
         }
     }
 

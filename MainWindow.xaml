@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:projet_UI"
         mc:Ignorable="d"
         Title="MainWindow" MinWidth="400" MinHeight="400">
-        
+
     <Window.Resources>
         <DataTemplate x:Key="cellule">
             <Grid>
@@ -17,7 +17,7 @@
                     <ColumnDefinition Width="30"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                
+
                 <TextBlock Text="{Binding X}" Grid.Column="0"/>
                 <TextBlock Text="{Binding Y}" Grid.Column="2"/>
                 <TextBlock Text="{Binding villename}" Grid.Column="4"/>
@@ -30,31 +30,32 @@
             <TabItem Header="CARTE">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="100*"></ColumnDefinition>
+                        <ColumnDefinition Width="36*"/>
+                        <ColumnDefinition Width="241*"/>
+                        <ColumnDefinition Width="377*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Canvas x:Name="canva" MouseDown="Canvas_MouseDown" HorizontalAlignment="Left" Height="264" Margin="2,37,0,0" VerticalAlignment="Top" Width="330">
+                    <Canvas x:Name="canva" MouseDown="Canvas_MouseDown" HorizontalAlignment="Left" Height="264" Margin="2,37,0,0" VerticalAlignment="Top" Width="330" Grid.ColumnSpan="3">
                         <Image Source="ressource/images.png" Height="259" Canvas.Left="3" Width="174" Canvas.Top="4"/>
                     </Canvas>
 
-                    <ListBox  Grid.Column="1" ItemTemplate="{StaticResource cellule}" ItemsSource="{Binding Villes}"></ListBox>
+                    <ListBox  Grid.Column="3" ItemTemplate="{StaticResource cellule}" ItemsSource="{Binding Villes}" Margin="1,0,0,0"/>
                 </Grid>
             </TabItem>
 
             <TabItem Header="LISTE">
                 <DataGrid>
-                <DataGrid.Columns>
+                    <DataGrid.Columns>
 
-                    <DataGridTextColumn Header="X" Binding="{Binding X}"/>
-                    <DataGridTextColumn Header="Y" Binding="{Binding Y}"/>
-                    <DataGridTextColumn Header="Ville" Binding="{Binding villename}"/>
+                        <DataGridTextColumn Header="X" Binding="{Binding X}"/>
+                        <DataGridTextColumn Header="Y" Binding="{Binding Y}"/>
+                        <DataGridTextColumn Header="Ville" Binding="{Binding villename}"/>
 
                     </DataGrid.Columns>
-                
                 </DataGrid>
-                
+
                 <!--<Grid>
-                    <Grid.ColumnDefinitions>
+                    <Grid.ColumnDefinitions> 
                         <ColumnDefinition Width="*">
                
                         </ColumnDefinition>
@@ -66,14 +67,45 @@
 
 
             <TabItem Header="RUN">
+            
             </TabItem>
 
 
 
             <TabItem Header="PARAM">
+                <Grid Margin="100">
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <StackPanel>
+
+                        <Label>Taille de la population:</Label>
+                        <TextBox Grid.Column="1" Margin="0,0,0,10"/>
+
+                        <Label Grid.Row="1">Mutation:</Label>
+                        <TextBox Grid.Row="1" Grid.Column="1" Margin="0,0,0,10"/>
+
+                        <Label Grid.Row="2">CrossOver:</Label>
+                        <TextBox Grid.Row="2" Grid.Column="1" Margin="0,0,0,10"/>
+
+                        <Label Grid.Row="3">Elite:</Label>
+                        <TextBox Grid.Row="3" Grid.Column="1" Margin="0,0,0,10"></TextBox>
+
+                        <Button Margin="5">Créer</Button>
+                    </StackPanel>
+                </Grid>
+
+
             </TabItem>
-            
-            
+
+
 
         </TabControl>
     </Grid>

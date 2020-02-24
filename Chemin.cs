@@ -8,31 +8,20 @@ namespace projet_UI
 {
     public class Chemin
     {
-
-        private List<Ville> Villes; //delacration de la liste
-
+       
         public StringBuilder Path = new StringBuilder();
 
 
         // getteur & setteur
+
+        private List<Ville> V;
         public List<Ville> listeVille
         {
-            get { return this.Villes; }
-            set { this.Villes = value; }
+            get { return this.listeVille; }
+            set { this.listeVille = value; }
         }
 
-        // constructeur de chemin
-        public Chemin(List<Ville> liste)
-        {
-            this.Villes = liste;
-        }
 
-        public Chemin()
-        {
-
-        }
-
-        // conprend rien
         public double Score
         {
             get
@@ -42,6 +31,20 @@ namespace projet_UI
 
         }
 
+
+        // constructeur de chemin
+        public Chemin(List<Ville> liste)
+        {
+            this.V = liste;
+        }
+
+        public Chemin()
+        {
+
+        }
+
+        // conprend rien
+      
         public double CalculScore()
         {
             double result = 0;
@@ -69,13 +72,10 @@ namespace projet_UI
             double y = v1.Y - v2.Y;
             double distance = Math.Sqrt(Sqr(x) + Sqr(y));
             return distance;
-
         }
 
         public List<Chemin> GetFirstGeneration(int nb, List<Ville> listville)
         {
-
-
             // déclaration liste vide
             List<Chemin> chemins = new List<Chemin>();
             int n = 0;
@@ -97,11 +97,11 @@ namespace projet_UI
                     for (int j= 0; j< duplicata.Count; j++)
                     {
 
-                    result.Path.Append(duplicata[rang].id);
+                    result.Path.Append(duplicata[rang].Id);
                     // supprimer l'element que on a randommé 
                     duplicata.RemoveAt(rang);}
                 }
-                result.Path.Append(duplicata[0].id);
+                result.Path.Append(duplicata[0].Id);
 
                 chemins.Add(result);
 
@@ -110,5 +110,7 @@ namespace projet_UI
             } while (n < 10);
             return chemins;
         }
-    }
+    
+    
+    } 
 }
