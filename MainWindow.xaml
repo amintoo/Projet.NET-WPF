@@ -27,7 +27,7 @@
 
     <Grid>
         <TabControl>
-            <TabItem Header="CARTE">
+            <TabItem Header="Carte">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="100*"></ColumnDefinition>
@@ -35,70 +35,54 @@
                         <ColumnDefinition Width="241*"/>
                         <ColumnDefinition Width="377*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Canvas x:Name="canva" MouseDown="Canvas_MouseDown" HorizontalAlignment="Left" Height="264" Margin="2,37,0,0" VerticalAlignment="Top" Width="330" Grid.ColumnSpan="3">
-                        <Image Source="ressource/images.png" Height="259" Canvas.Left="3" Width="174" Canvas.Top="4"/>
+                    <Canvas x:Name="canva" MouseDown="Canvas_MouseDown" HorizontalAlignment="Left" Height="264" Margin="10" VerticalAlignment="Top" Width="500" Grid.ColumnSpan="3">
+                        <Image Source="ressource/france.jpg" Height="508" Canvas.Left="1" Width="359"/>
                     </Canvas>
 
                     <ListBox  Grid.Column="3" ItemTemplate="{StaticResource cellule}" ItemsSource="{Binding Villes}" Margin="1,0,0,0"/>
                 </Grid>
             </TabItem>
 
-            <TabItem Header="LISTE">
-                <DataGrid>
-                    <DataGrid.Columns>
-
-                        <DataGridTextColumn Header="X" Binding="{Binding X}"/>
-                        <DataGridTextColumn Header="Y" Binding="{Binding Y}"/>
-                        <DataGridTextColumn Header="Ville" Binding="{Binding villename}"/>
-
-                    </DataGrid.Columns>
-                </DataGrid>
-
-                <!--<Grid>
-                    <Grid.ColumnDefinitions> 
-                        <ColumnDefinition Width="*">
-               
-                        </ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-
-                    <ListBox ItemTemplate="{StaticResource cellule}" ItemsSource="{Binding Villes}"></ListBox>
-                </Grid>  -->
-            </TabItem>
-
-
-            <TabItem Header="RUN">
-            
-            </TabItem>
-
-
-
-            <TabItem Header="PARAM">
-                <Grid Margin="100">
-                    <Grid.ColumnDefinitions>
-
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
+            <TabItem Header="Listes">
+                <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="*" />
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="6*"></RowDefinition>
                     </Grid.RowDefinitions>
+
+                    <DataGrid Grid.Row="1" Margin="10,10,10,0" Height="auto" VerticalAlignment="Top" Name="grid_seconde" ItemsSource="{Binding Villes}" IsReadOnly="True" AutoGenerateColumns="False" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Ville" Binding="{Binding villename}"  Width="250" />
+                            <DataGridTextColumn Header="X" Binding="{Binding X}"  Width="100" />
+                            <DataGridTextColumn Header="Y"  Binding="{Binding Y}" Width="100" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                </Grid>
+            </TabItem>
+
+
+            <TabItem Header="Run">
+            </TabItem>
+
+            <TabItem Header="Parametrage">
+                <Grid Margin="100">
 
                     <StackPanel>
 
                         <Label>Taille de la population:</Label>
-                        <TextBox Grid.Column="1" Margin="0,0,0,10"/>
+                        <TextBox Margin="10" Text="{Binding Taille_population}"/>
 
-                        <Label Grid.Row="1">Mutation:</Label>
-                        <TextBox Grid.Row="1" Grid.Column="1" Margin="0,0,0,10"/>
+                        <Label>Mutation:</Label>
+                        <TextBox  Margin="10" Text="{Binding Mutation}"/>
 
-                        <Label Grid.Row="2">CrossOver:</Label>
-                        <TextBox Grid.Row="2" Grid.Column="1" Margin="0,0,0,10"/>
+                        <Label>CrossOver:</Label>
+                        <TextBox Margin="10" Text="{Binding CrossOver}"/>
 
-                        <Label Grid.Row="3">Elite:</Label>
-                        <TextBox Grid.Row="3" Grid.Column="1" Margin="0,0,0,10"></TextBox>
+                        <Label>Elite:</Label>
+                        <TextBox Margin="10" Text="{Binding Elite}"></TextBox>
 
-                        <Button Margin="5">Créer</Button>
+
                     </StackPanel>
                 </Grid>
 
