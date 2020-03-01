@@ -1,0 +1,10 @@
+C:\Users\mbds\source\repos\projet-UI\obj\Debug\AppWPF.csprojAssemblyReference.cache
+C:\Users\mbds\source\repos\projet-UI\obj\Debug\Input_ville.g.cs
+C:\Users\mbds\source\repos\projet-UI\obj\Debug\MainWindow.g.cs
+C:\Users\mbds\source\repos\projet-UI\obj\Debug\Parametrage.g.cs
+C:\Users\mbds\source\repos\projet-UI\obj\Debug\App.g.cs
+C:\Users\mbds\source\repos\projet-UI\obj\Debug\projet-UI_Content.g.cs
+C:\Users\mbds\source\repos\projet-UI\obj\Debug\projet-UI_MarkupCompile.cache
+C:\Users\mbds\source\repos\projet-UI\obj\Debug\projet-UI_MarkupCompile.lref
+C:\Users\mbds\source\repos\projet-UI\obj\Debug\projet-UI.exe
+C:\Users\mbds\source\repos\projet-UI\obj\Debug\projet-UI.pdb

@@ -75,9 +75,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Chemin.cs" />
-    <Compile Include="Data.cs" />
-    <Compile Include="dialog.cs" />
     <Compile Include="Generation.cs" />
     <Compile Include="Input_ville.xaml.cs">
       <DependentUpon>Input_ville.xaml</DependentUpon>
@@ -85,8 +82,6 @@
     <Compile Include="Parametrage.xaml.cs">
       <DependentUpon>Parametrage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Ville.cs" />
     <Page Include="Input_ville.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
