@@ -22,15 +22,7 @@ namespace ConsoleApp
             }
         }
 
-        /// <summary>
-        /// la fonction permettant lancement de la creation des generations
-        /// </summary>
-        /// <param name="taillePopulation"></param> taille de la population
-        /// <param name="nombreIndividu"></param> nombre de chemin au debut de chaque generation
-        /// <param name="mesVilles"></param>
-        /// <param name="nombreCross"></param>
-        /// <param name="nombreMutation"></param>
-        /// <param name="nbrElite"></param>
+        
         public void Play(int taillePopulation, int nombreIndividu, List<Ville> mesVilles, int nombreCross, int nombreMutation, int nbrElite)
         {
             int cntGeneration = 1;
@@ -62,10 +54,7 @@ namespace ConsoleApp
             foreach (Generation po in this.mesGenerations)
             {
                 Console.WriteLine("--------Generation " + i + "------ MOYEN: " + po.GetMoyenScoreGeneration + " M.SCORE: " + po.GetTopScoreGeneration);
-                //foreach(Chemin c in po.GetGeneration){
-                //    Console.WriteLine("--------Chemin------");
-                //    Console.WriteLine(c + c.Score.ToString());
-                //}
+               
                 i++;
             }
             Console.WriteLine("Affiche de meilleur chemin de la population");

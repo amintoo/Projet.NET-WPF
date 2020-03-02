@@ -6,14 +6,7 @@ namespace ConsoleApp
 {
     class Parametrage
     {
-        /// <summary>
-        /// specification des parametrages de l'application
-        /// </summary>
-        /// <param name="_taille"></param> taille de la population c'est le nombre de generation qu'on va aboutir
-        /// <param name="_nbchemin"></param> nbr de chemin au debut de chaque generation
-        /// <param name="_xover"></param>
-        /// <param name="_mutation"></param>
-        /// <param name="_elite"></param>
+        
         public Parametrage(int _taille, int _nbchemin, int _xover, int _mutation, int _elite)
         {
             this.mutation = _mutation;

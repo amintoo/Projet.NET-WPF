@@ -7,28 +7,25 @@ namespace ConsoleApp
 {
     class Generation
     {
-        // private List<Ville> mesVilles;
+      
         private List<Ville> lesVilles;
-        //private List<Chemin> maPopulation;
+        
         private List<Chemin> mapopulation;
-        //public List<Chemin> GetPopulation//{//get//{ //return this.maPopulation;//}//}
+       
         public List<Chemin> Get_population { get { return this.mapopulation; } }
-        //private List<Chemin> maGeneration;
+        
         private List<Chemin> mageneration;
-        // private string nameGeneration;
+       
         private string nomgeneration;
-        //public String NameGeneration{get{return this.nameGeneration;}}
+       
         public String NameGeneration{get{return this.nomgeneration;}}
-        //private int FirstGeneration;
+        
         private int PremierGeneration;
-        //public int NombreIndividu{get{return this.FirstGeneration;}set{this.FirstGeneration = value;}}
+      
         public int FirstGeneration{get{return this.PremierGeneration; }set{this.PremierGeneration = value;}}
-        //public List<Chemin> GetGeneration{get{return this.maGeneration;}set{this.maGeneration = value}}
+        
         public List<Chemin> Get_generation{get{return this.mageneration;}set{ this.mageneration = value; }}
-        //public Generation(int firstGeneration, List<Chemin> mesChemins, string name_gen = null)
-        //{ this.FirstGeneration = firstGeneration;this.maGeneration = new List<Chemin>(mesChemins);
-        //this.maPopulation = new List<Chemin>();
-        //this.nameGeneration = name_gen;}
+        
         public Generation(int firstGeneration, List<Chemin> mesChemins, string nom_gen = null)
         {
             this.FirstGeneration = firstGeneration;
@@ -98,7 +95,7 @@ namespace ConsoleApp
                 for (int i = 0; i < partition1; i++)
                 {
                     CrossVille.Add(CrossChemin[0].MesVilles[i]);
-                    //resultVilles.Add(CrossChemin[0].MesVilles[i]);
+                    
                 }
 
                 for (int i = partition1; i < taille; i++)
@@ -162,7 +159,7 @@ namespace ConsoleApp
 
         public void Elite(int nbrElite)
         {
-            //int nombreElite = maGeneration.Count / 5; // le nombre d'elite ne sera pas programmer ( le nombre de ma generation / 5 ) 
+            
             int nombreElite = nbrElite;
             var elite = from e in mageneration orderby e.Score select e;
 

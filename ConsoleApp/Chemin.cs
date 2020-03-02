@@ -38,7 +38,7 @@ namespace ConsoleApp
                     Ville v2 = lesVilles[i + 1];
                     double x = Math.Abs(v1.XVille - v2.XVille);
                     double y = Math.Abs(v1.YVille - v2.YVille);
-                    //double distance = Math.Sqrt(Math.Pow(x, 2) + Math.Pow(y, 2));
+                    
 
                     double distance = Math.Sqrt(Math.Pow(v1.XVille - v2.XVille, 2) + Math.Pow(v1.YVille - v2.YVille, 2));
                     score += distance;
@@ -49,9 +49,7 @@ namespace ConsoleApp
 
         }
 
-        /// utiliser linq pour : 
-        /// toute les villes qui commencent par a ou A
-        /// recuperer les 10 meilleir chemin d'une liste de chemin
+        
         public IEnumerable<Ville> VilleCommencePar(char c)
         {
             IEnumerable<Ville> listeVilleLINQ = from v in this.lesVilles
@@ -72,7 +70,7 @@ namespace ConsoleApp
                 sb.Append(v.NomVille);
                 sb.Append("-");
             }
-            sb = sb.Remove(sb.Length - 1, 1);  // enlever dernier caractere '-' de la chaine
+            sb = sb.Remove(sb.Length - 1, 1);  
             return sb.ToString();
         }
 
