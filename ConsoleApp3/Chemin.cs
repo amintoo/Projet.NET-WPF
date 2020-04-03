@@ -26,6 +26,10 @@ namespace ConsoleApp
             }
         }
 
+        public Chemin()
+        {
+        }
+
         public double Score
         {
             get
@@ -36,11 +40,11 @@ namespace ConsoleApp
                 {
                     Ville v1 = lesVilles[i];
                     Ville v2 = lesVilles[i + 1];
-                    double x = Math.Abs(v1.XVille - v2.XVille);
-                    double y = Math.Abs(v1.YVille - v2.YVille);
+                    double x = Math.Abs(v1.X - v2.X);
+                    double y = Math.Abs(v1.Y - v2.Y);
                     
 
-                    double distance = Math.Sqrt(Math.Pow(v1.XVille - v2.XVille, 2) + Math.Pow(v1.YVille - v2.YVille, 2));
+                    double distance = Math.Sqrt(Math.Pow(v1.X - v2.X, 2) + Math.Pow(v1.Y - v2.Y, 2));
                     score += distance;
                 }
 
@@ -53,11 +57,11 @@ namespace ConsoleApp
         public IEnumerable<Ville> VilleCommencePar(char c)
         {
             IEnumerable<Ville> listeVilleLINQ = from v in this.lesVilles
-                                                where v.NomVille.ToLower()[0] == c.ToString().ToLower()[0]
+                                                where v.Nomville.ToLower()[0] == c.ToString().ToLower()[0]
                                                 select v;
             foreach (Ville v in listeVilleLINQ)
             {
-                Console.WriteLine(v.NomVille);
+                Console.WriteLine(v.Nomville);
             }
             return listeVilleLINQ;
         }
@@ -67,7 +71,7 @@ namespace ConsoleApp
             StringBuilder sb = new StringBuilder();
             foreach (Ville v in lesVilles)
             {
-                sb.Append(v.NomVille);
+                sb.Append(v.Nomville);
                 sb.Append("-");
             }
             sb = sb.Remove(sb.Length - 1, 1);  
