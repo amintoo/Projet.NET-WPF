@@ -4,7 +4,7 @@ using System.Threading;
 
 namespace ConsoleApp
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -28,8 +28,8 @@ namespace ConsoleApp
             Villes.Add(G);
             //Chemin C1 = new Chemin(Villes);
 
-            Parametrage param = new Parametrage(30, 10, 30, 30, 2);
-            Generation g = new Generation(10, Villes);
+            Parametrage param = new Parametrage(10, 10, 30, 30, 2);
+            Generation g = new Generation(7, Villes);
             Population p = new Population();
             Thread thread = new Thread(new ThreadStart(() => p.Play(param.Taille_population, param.NbrCheminInGeneration,Villes, param.Crossover, param.Mutation, param.Elite)));
             thread.Start();

@@ -9,3 +9,16 @@ C:\Users\ASUS\Desktop\Projet.NET-WPF\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleA
 C:\Users\ASUS\Desktop\Projet.NET-WPF\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.AssemblyInfo.cs
 C:\Users\ASUS\Desktop\Projet.NET-WPF\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.dll
 C:\Users\ASUS\Desktop\Projet.NET-WPF\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.pdb
+C:\Users\mbds\source\repos\projet-UI\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.exe
+C:\Users\mbds\source\repos\projet-UI\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.deps.json
+C:\Users\mbds\source\repos\projet-UI\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.runtimeconfig.json
+C:\Users\mbds\source\repos\projet-UI\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.runtimeconfig.dev.json
+C:\Users\mbds\source\repos\projet-UI\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.dll
+C:\Users\mbds\source\repos\projet-UI\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.pdb
+C:\Users\mbds\source\repos\projet-UI\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.csprojAssemblyReference.cache
+C:\Users\mbds\source\repos\projet-UI\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\mbds\source\repos\projet-UI\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.AssemblyInfoInputs.cache
+C:\Users\mbds\source\repos\projet-UI\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.AssemblyInfo.cs
+C:\Users\mbds\source\repos\projet-UI\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.dll
+C:\Users\mbds\source\repos\projet-UI\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.pdb
+C:\Users\mbds\source\repos\projet-UI\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.genruntimeconfig.cache

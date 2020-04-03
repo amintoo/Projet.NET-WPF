@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace ConsoleApp
 {
-    class Generation
+     public class Generation
     {
       
         private List<Ville> lesVilles;
@@ -118,7 +118,7 @@ namespace ConsoleApp
             }
         }
 
-            public List<Ville> VerifierDouble(List<Ville> ListeATester)
+        public List<Ville> VerifierDouble(List<Ville> ListeATester)
             {
                 List<Ville> maListe = new List<Ville>();
                 foreach (Ville v in ListeATester)

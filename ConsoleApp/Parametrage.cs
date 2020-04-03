@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsoleApp
 {
-    class Parametrage
+    public class Parametrage
     {
         
         public Parametrage(int _taille, int _nbchemin, int _xover, int _mutation, int _elite)

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ConsoleApp
 {
-    class Population
+    public class Population
     {
         private List<Generation> mesGenerations;
 

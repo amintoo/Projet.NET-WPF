@@ -6,7 +6,7 @@ using System.Text;
 namespace ConsoleApp
 {
    // [Table("Ville")]
-    class Ville
+    public class Ville
     {   private string nomville;
         private int  X;
         private int Y;

@@ -20,7 +20,7 @@
 
                 <TextBlock Text="{Binding X}" Grid.Column="0"/>
                 <TextBlock Text="{Binding Y}" Grid.Column="2"/>
-                <TextBlock Text="{Binding villename}" Grid.Column="4"/>
+                <TextBlock Text="{Binding Nomville}" Grid.Column="4"/>
             </Grid>
         </DataTemplate>
     </Window.Resources>
@@ -52,17 +52,14 @@
 
                     <DataGrid Grid.Row="1" Margin="10,10,10,0" Height="auto" VerticalAlignment="Top" Name="grid_seconde" ItemsSource="{Binding Villes}" IsReadOnly="True" AutoGenerateColumns="False" >
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Ville" Binding="{Binding villename}"  Width="250" />
+                            <DataGridTextColumn Header="Ville" Binding="{Binding Nomville}"  Width="250" />
                             <DataGridTextColumn Header="X" Binding="{Binding X}"  Width="100" />
                             <DataGridTextColumn Header="Y"  Binding="{Binding Y}" Width="100" />
                         </DataGrid.Columns>
                     </DataGrid>
-
-                    
-                    
+ 
                 </Grid>
             </TabItem>
-
 
             <TabItem Header="Run">
             </TabItem>

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ConsoleApp
 {
-    class Chemin
+    public class Chemin
     {
         private List<Ville> lesVilles;
 

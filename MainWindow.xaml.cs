@@ -1,4 +1,4 @@
-﻿using Partie_Console;
+﻿using ConsoleApp;  
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -16,7 +16,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace projet_UI
+
 {
     /// <summary>
     /// Logique d'interaction pour MainWindow.xaml
@@ -89,6 +91,7 @@ namespace projet_UI
             if (this.PropertyChanged != null)
                 this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
         }
+
         private ObservableCollection<Ville> villes = new ObservableCollection<Ville>();
 
         public ObservableCollection<Ville> Villes { get => villes; set => villes = value; }
@@ -125,8 +128,8 @@ namespace projet_UI
             el.Margin = t;
 
             // creation de la ville
-            Ville town = new Ville(Convert.ToInt32(x), Convert.ToInt32(y), villename);
-    
+            Ville town = new Ville(villename, Convert.ToInt32(x), Convert.ToInt32(y));
+            
             Chemin c = new Chemin();
           
             List<Ville> Vlles = new List<Ville>(Villes);
